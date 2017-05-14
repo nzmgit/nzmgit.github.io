@@ -196,7 +196,6 @@
 <li><p>另一方面：引入虚拟DOM，提供了一种一致的开发方式来开发服务端应用，Web应用，手机端应用。因为有了虚拟DOM，通过配置不同的渲染器，就可以将Virtual Dom的内容渲染到不同的平台。对于开发者，使用JS通吃所有平台。</p>
 </li>
 </ul>
-<p><img src="./hyp.png" alt=""></p>
 <h4 id="2-2-虚拟DOM速度快的原因"><a href="#2-2-虚拟DOM速度快的原因" class="headerlink" title="2.2 虚拟DOM速度快的原因"></a>2.2 虚拟DOM速度快的原因</h4><ul>
 <li><p>在Web开发中，我们总需要将变化的数据实时反应到UI上，这时就需要对DOM进行操作。而复杂或频繁的DOM操作通常是性能瓶颈产生的原因（如何进行高性能的复杂DOM操作通常是衡量一个前端开发人员技能的重要指标）。</p>
 </li>
@@ -212,7 +211,7 @@
 </li>
 <li><p>对于MVC开发模式来说，开发者将三者定义成不同的类，实现了表现，数据，控制的分离。开发者更多的是从技术的角度来对UI进行拆分，实现松耦合。</p>
 </li>
-<li><p>对于React而言，则完全是一个新的思路，开发者从功能的角度出发，将UI分成不同的组件，每个组件都独立封装。<br><img src="zujian.png" alt=""></p>
+<li><p>对于React而言，则完全是一个新的思路，开发者从功能的角度出发，将UI分成不同的组件，每个组件都独立封装。</p>
 </li>
 </ul>
 <h4 id="2-4-组件化的开发特性"><a href="#2-4-组件化的开发特性" class="headerlink" title="2.4 组件化的开发特性"></a>2.4 组件化的开发特性</h4><p>（1）可组合（Composeable）：一个组件易于和其它组件一起使用，或者嵌套在另一个组件内部。如果一个组件内部创建了另一个组件，那么说父组件拥有（own）它创建的子组件，通过这个特性，一个复杂的UI可以拆分成多个简单的UI组件；</p>
@@ -239,7 +238,6 @@
 </ol>
 <p>JSX参考链接：<a href="http://www.jianshu.com/p/7e872afeae42" target="_blank" rel="external">http://www.jianshu.com/p/7e872afeae42</a></p>
 <h4 id="2-6-开发工具"><a href="#2-6-开发工具" class="headerlink" title="2.6 开发工具"></a>2.6 开发工具</h4><p>React Developer Tools是一款由facebook开发的有用的Chrome 浏览器扩展工具，可在Chrome浏览器扩展插件中下载安装。</p>
-<p><img src="react-dev-tools.jpg" alt=""></p>
 <h2 id="3、react的API"><a href="#3、react的API" class="headerlink" title="3、react的API"></a>3、react的API</h2><h4 id="3-2-顶层-API"><a href="#3-2-顶层-API" class="headerlink" title="3.2 顶层 API"></a>3.2 顶层 API</h4><p><a href="http://www.reactjs.cn/react/docs/top-level-api.html" target="_blank" rel="external">顶层 API链接</a></p>
 <h4 id="3-3-组件-API"><a href="#3-3-组件-API" class="headerlink" title="3.3 组件 API"></a>3.3 组件 API</h4><p><a href="http://www.reactjs.cn/react/docs/component-api.html" target="_blank" rel="external">组件 API链接</a></p>
 <h2 id="4、组件的状态与属性"><a href="#4、组件的状态与属性" class="headerlink" title="4、组件的状态与属性"></a>4、组件的状态与属性</h2><p>组件本质上是状态机，输入确定，输出一定确定。组件把状态与结果一一对应起来，组件中有state与prop（状态与属性）。</p>
@@ -248,7 +246,7 @@
 <li>状态(state)是子组件内部维护的数据，当状态发生变化的同时，组件也会进行更新。当状态发生转换时会触发不同的钩子函数，从而让开发者有机会做出相应。</li>
 <li>由于 this.props 和 this.state 都用于描述组件的特性，可能会产生混淆。一个简单的区分方法是，this.props 表示那些一旦定义，就不再改变的特性，而 this.state 是会随着用户互动而产生变化的特性。</li>
 </ul>
-<h2 id="5、组件的生命周期"><a href="#5、组件的生命周期" class="headerlink" title="5、组件的生命周期"></a>5、组件的生命周期</h2><p>在组件的整个生命周期中，随着该组件的props或者state发生改变，它的DOM表现也将有相应的变化，一个组件就是一个状态机：对于特定的输入，它总会返回一致的输出。 React为每个组件提供了生命周期钩子函数去响应不同的时刻，组件的生命周期分为三个部分：（1）实例化；（2）存在期；（3）销毁&amp;清理期。具体周期如下图所示：<br><img src="life-circle.png" alt=""></p>
+<h2 id="5、组件的生命周期"><a href="#5、组件的生命周期" class="headerlink" title="5、组件的生命周期"></a>5、组件的生命周期</h2><p>在组件的整个生命周期中，随着该组件的props或者state发生改变，它的DOM表现也将有相应的变化，一个组件就是一个状态机：对于特定的输入，它总会返回一致的输出。 React为每个组件提供了生命周期钩子函数去响应不同的时刻，组件的生命周期分为三个部分：（1）实例化；（2）存在期；（3）销毁&amp;清理期。具体周期如下图所示：</p>
 <h4 id="生命周期共提供了10个不同的API。"><a href="#生命周期共提供了10个不同的API。" class="headerlink" title="生命周期共提供了10个不同的API。"></a>生命周期共提供了10个不同的API。</h4><p>1.getDefaultProps</p>
 <p>作用于组件类，只调用一次，返回对象用于设置默认的props，对于引用值，会在实例中共享。</p>
 <p>2.getInitialState</p>
@@ -615,19 +613,19 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">react</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">分享</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">前端笔记</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">事件</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">react</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">分享</a>
               </li>
             
             <div class="clearfix"></div>
