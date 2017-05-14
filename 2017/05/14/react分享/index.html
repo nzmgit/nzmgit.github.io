@@ -8,19 +8,22 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>react分享 | Neil</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1、react简介React 是目前最热门的前端框架。  ReactJS官网地址：http://facebook.github.io/react/ Github地址：https://github.com/facebook/react 中文地址：http://www.reactjs.cn  React 是 Facebook 推出的一个用来构建用户界面的 JavaScript 库。具备以下特性：  组">
+  <meta name="description" content="1、react简介React 是目前最热门的前端框架。 ReactJS官网地址：http://facebook.github.io/react/ Github地址：https://github.com/facebook/react 中文地址：http://www.reactjs.cn  React 是 Facebook 推出的一个用来构建用户界面的 JavaScript 库。具备以下特性：  组件">
 <meta name="keywords" content="react,分享">
 <meta property="og:type" content="article">
 <meta property="og:title" content="react分享">
 <meta property="og:url" content="http://yoursite.com/2017/05/14/react分享/index.html">
 <meta property="og:site_name" content="Neil">
-<meta property="og:description" content="1、react简介React 是目前最热门的前端框架。  ReactJS官网地址：http://facebook.github.io/react/ Github地址：https://github.com/facebook/react 中文地址：http://www.reactjs.cn  React 是 Facebook 推出的一个用来构建用户界面的 JavaScript 库。具备以下特性：  组">
-<meta property="og:image" content="http://yoursite.com/2017/05/14/react分享/react-logo.png">
-<meta property="og:updated_time" content="2017-05-14T05:54:12.000Z">
+<meta property="og:description" content="1、react简介React 是目前最热门的前端框架。 ReactJS官网地址：http://facebook.github.io/react/ Github地址：https://github.com/facebook/react 中文地址：http://www.reactjs.cn  React 是 Facebook 推出的一个用来构建用户界面的 JavaScript 库。具备以下特性：  组件">
+<meta property="og:image" content="http://yoursite.com/2017/05/14/react分享/hyp.png">
+<meta property="og:image" content="http://yoursite.com/2017/05/14/react分享/zujian.png">
+<meta property="og:image" content="http://yoursite.com/2017/05/14/react分享/react-dev-tools.jpg">
+<meta property="og:image" content="http://yoursite.com/2017/05/14/react分享/life-circle.png">
+<meta property="og:updated_time" content="2017-05-14T05:55:33.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="react分享">
-<meta name="twitter:description" content="1、react简介React 是目前最热门的前端框架。  ReactJS官网地址：http://facebook.github.io/react/ Github地址：https://github.com/facebook/react 中文地址：http://www.reactjs.cn  React 是 Facebook 推出的一个用来构建用户界面的 JavaScript 库。具备以下特性：  组">
-<meta name="twitter:image" content="http://yoursite.com/2017/05/14/react分享/react-logo.png">
+<meta name="twitter:description" content="1、react简介React 是目前最热门的前端框架。 ReactJS官网地址：http://facebook.github.io/react/ Github地址：https://github.com/facebook/react 中文地址：http://www.reactjs.cn  React 是 Facebook 推出的一个用来构建用户界面的 JavaScript 库。具备以下特性：  组件">
+<meta name="twitter:image" content="http://yoursite.com/2017/05/14/react分享/hyp.png">
   
     <link rel="alternative" href="/atom.xml" title="Neil" type="application/atom+xml">
   
@@ -175,7 +178,6 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="1、react简介"><a href="#1、react简介" class="headerlink" title="1、react简介"></a>1、react简介</h2><p>React 是目前最热门的前端框架。</p>
-<p><img src="./react-logo.png" alt=""></p>
 <p>ReactJS官网地址：<a href="http://facebook.github.io/react/" target="_blank" rel="external">http://facebook.github.io/react/</a></p>
 <p>Github地址：<a href="https://github.com/facebook/react" target="_blank" rel="external">https://github.com/facebook/react</a></p>
 <p>中文地址：<a href="http://www.reactjs.cn" target="_blank" rel="external">http://www.reactjs.cn</a></p>
@@ -202,6 +204,85 @@
 <li><p>另一方面：引入虚拟DOM，提供了一种一致的开发方式来开发服务端应用，Web应用，手机端应用。因为有了虚拟DOM，通过配置不同的渲染器，就可以将Virtual Dom的内容渲染到不同的平台。对于开发者，使用JS通吃所有平台。</p>
 </li>
 </ul>
+<p><img src="./hyp.png" alt=""></p>
+<h4 id="2-2-虚拟DOM速度快的原因"><a href="#2-2-虚拟DOM速度快的原因" class="headerlink" title="2.2 虚拟DOM速度快的原因"></a>2.2 虚拟DOM速度快的原因</h4><ul>
+<li><p>在Web开发中，我们总需要将变化的数据实时反应到UI上，这时就需要对DOM进行操作。而复杂或频繁的DOM操作通常是性能瓶颈产生的原因（如何进行高性能的复杂DOM操作通常是衡量一个前端开发人员技能的重要指标）。</p>
+</li>
+<li><p>React为此引入了虚拟DOM（Virtual DOM）的机制：在浏览器端用Javascript实现了一套DOM API。基于React进行开发时所有的DOM构造都是通过虚拟DOM进行，每当数据变化时，React都会重新构建整个DOM树，然后React将当前整个DOM树和上一次的DOM树进行对比，得到DOM结构的区别，然后仅仅将需要变化的部分进行实际的浏览器DOM更新。而且React能够批处理虚拟DOM的刷新，在一个事件循环（Event Loop）内的两次数据变化会被合并，例如你连续的先将节点内容从A变成B，然后又从B变成A，React会认为UI不发生任何变化，而如果通过手动控制，这种逻辑通常是极其复杂的。</p>
+</li>
+<li><p>尽管每一次都需要构造完整的虚拟DOM树，但是因为<strong>虚拟DOM是内存数据，性能是极高的，而对实际DOM进行操作的仅仅是Diff部分，因而能达到提高性能的目的</strong>。这样，在保证性能的同时，开发者将不再需要关注某个数据的变化如何更新到一个或多个具体的DOM元素，而只需要关心在任意一个数据状态下，整个界面是如何Render的。</p>
+</li>
+</ul>
+<h4 id="2-3-组件化的开发思路"><a href="#2-3-组件化的开发思路" class="headerlink" title="2.3 组件化的开发思路"></a>2.3 组件化的开发思路</h4><ul>
+<li><p>所谓组件，即封装起来的具有独立功能的UI部件。React推荐以组件的方式去重新思考UI构成，将UI上每一个功能相对独立的模块定义成组件，然后将小的组件通过组合或者嵌套的方式构成大的组件，最终完成整体UI的构建。例如，Facebook的instagram.com整站都采用了React来开发，整个页面就是一个大的组件，其中包含了嵌套的大量其它组件，大家有兴趣可以看下它背后的代码。</p>
+</li>
+<li><p>如果说MVC的思想让你做到视图-数据-控制器的分离，那么组件化的思考方式则是带来了UI功能模块之间的分离。我们通过一个典型的Blog评论界面来看MVC和组件化开发思路的区别。</p>
+</li>
+<li><p>对于MVC开发模式来说，开发者将三者定义成不同的类，实现了表现，数据，控制的分离。开发者更多的是从技术的角度来对UI进行拆分，实现松耦合。</p>
+</li>
+<li><p>对于React而言，则完全是一个新的思路，开发者从功能的角度出发，将UI分成不同的组件，每个组件都独立封装。<br><img src="zujian.png" alt=""></p>
+</li>
+</ul>
+<h4 id="2-4-组件化的开发特性"><a href="#2-4-组件化的开发特性" class="headerlink" title="2.4 组件化的开发特性"></a>2.4 组件化的开发特性</h4><p>（1）可组合（Composeable）：一个组件易于和其它组件一起使用，或者嵌套在另一个组件内部。如果一个组件内部创建了另一个组件，那么说父组件拥有（own）它创建的子组件，通过这个特性，一个复杂的UI可以拆分成多个简单的UI组件；</p>
+<p>（2）可重用（Reusable）：每个组件都是具有独立功能的，它可以被使用在多个UI场景；</p>
+<p>（3）可维护（Maintainable）：每个小的组件仅仅包含自身的逻辑，更容易被理解和维护；</p>
+<p>（4）可测试（Testable）：因为每个组件都是独立的，那么对于各个组件分别测试显然要比对于整个UI进行测试容易的多。</p>
+<h4 id="2-5-JSX语法"><a href="#2-5-JSX语法" class="headerlink" title="2.5 JSX语法"></a>2.5 JSX语法</h4><ul>
+<li>JSX本身就和XML语法类似，可以定义属性以及子元素。唯一特殊的是可以用大括号来加入JavaScript表达式。遇到 HTML 标签（以 &lt; 开头），就用 HTML 规则解析；遇到代码块（以 { 开头），就用 JavaScript 规则解析。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">var names = [&apos;Alice&apos;, &apos;Emily&apos;, &apos;Kate&apos;];</div><div class="line"></div><div class="line">ReactDOM.render(</div><div class="line">  &lt;div&gt;</div><div class="line">  &#123;</div><div class="line">    names.map(function (name) &#123;</div><div class="line">      return &lt;div&gt;Hello, &#123;name&#125;!&lt;/div&gt;</div><div class="line">    &#125;)</div><div class="line">  &#125;</div><div class="line">  &lt;/div&gt;,</div><div class="line">  document.getElementById(&apos;example&apos;)</div><div class="line">);</div></pre></td></tr></table></figure>
+<ul>
+<li>JSX 展开属性</li>
+</ul>
+<p>有时候你需要给组件设置多个属性，你不想一个个写下这些属性，或者有时候你甚至不知道这些属性的名称，这时候 spread attributes 的功能就很有用了。<br><figure class="highlight jsx"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> props = &#123;&#125;;</div><div class="line"> props.foo = x;</div><div class="line"> props.bar = y;</div><div class="line"> <span class="keyword">var</span> component = &lt;Component &#123;...props&#125; /&gt;;</div></pre></td></tr></table></figure></p>
+<p>属性也可以被覆盖，写在后面的属性值会覆盖前面的属性。<br><figure class="highlight jsx"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> props = &#123; <span class="attr">foo</span>: <span class="string">'default'</span> &#125;;</div><div class="line"><span class="keyword">var</span> component = &lt;Component &#123;...props&#125; foo=&#123;'override'&#125; /&gt;;</div><div class="line">console.log(component.props.foo); // 'override'</div></pre></td></tr></table></figure></p>
+<ul>
+<li>JSX 里添加注释很容易；它们只是 JS 表达式而已。你只需要在一个标签的子节点内(非最外层)小心地用 {} 包围要注释的部分。</li>
+</ul>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> content = (</div><div class="line">  &lt;Nav&gt;</div><div class="line">    &#123;/* 一般注释, 用 &#123;&#125; 包围 */&#125;</div><div class="line">    &lt;Person</div><div class="line">      /* 多</div><div class="line">         行</div><div class="line">         注释 */</div><div class="line">      name=&#123;window.isLoggedIn ? window.name : ''&#125; // 行尾注释</div><div class="line">    /&gt;</div><div class="line">  &lt;/Nav&gt;</div><div class="line">);</div></pre></td></tr></table></figure>
+<p>JSX注意点：</p>
+<ol>
+<li>你的React组件名称的首字母应当大写。</li>
+<li>class 属性需要写成 className ，for 属性需要写成 htmlFor ，这是因为 class 和 for 是 JavaScript 的保留字。</li>
+</ol>
+<p>JSX参考链接：<a href="http://www.jianshu.com/p/7e872afeae42" target="_blank" rel="external">http://www.jianshu.com/p/7e872afeae42</a></p>
+<h4 id="2-6-开发工具"><a href="#2-6-开发工具" class="headerlink" title="2.6 开发工具"></a>2.6 开发工具</h4><p>React Developer Tools是一款由facebook开发的有用的Chrome 浏览器扩展工具，可在Chrome浏览器扩展插件中下载安装。</p>
+<p><img src="react-dev-tools.jpg" alt=""></p>
+<h2 id="3、react的API"><a href="#3、react的API" class="headerlink" title="3、react的API"></a>3、react的API</h2><h4 id="3-2-顶层-API"><a href="#3-2-顶层-API" class="headerlink" title="3.2 顶层 API"></a>3.2 顶层 API</h4><p><a href="http://www.reactjs.cn/react/docs/top-level-api.html" target="_blank" rel="external">顶层 API链接</a></p>
+<h4 id="3-3-组件-API"><a href="#3-3-组件-API" class="headerlink" title="3.3 组件 API"></a>3.3 组件 API</h4><p><a href="http://www.reactjs.cn/react/docs/component-api.html" target="_blank" rel="external">组件 API链接</a></p>
+<h2 id="4、组件的状态与属性"><a href="#4、组件的状态与属性" class="headerlink" title="4、组件的状态与属性"></a>4、组件的状态与属性</h2><p>组件本质上是状态机，输入确定，输出一定确定。组件把状态与结果一一对应起来，组件中有state与prop（状态与属性）。</p>
+<ul>
+<li>属性(props)是由父组件传递给子组件的；</li>
+<li>状态(state)是子组件内部维护的数据，当状态发生变化的同时，组件也会进行更新。当状态发生转换时会触发不同的钩子函数，从而让开发者有机会做出相应。</li>
+<li>由于 this.props 和 this.state 都用于描述组件的特性，可能会产生混淆。一个简单的区分方法是，this.props 表示那些一旦定义，就不再改变的特性，而 this.state 是会随着用户互动而产生变化的特性。</li>
+</ul>
+<h2 id="5、组件的生命周期"><a href="#5、组件的生命周期" class="headerlink" title="5、组件的生命周期"></a>5、组件的生命周期</h2><p>在组件的整个生命周期中，随着该组件的props或者state发生改变，它的DOM表现也将有相应的变化，一个组件就是一个状态机：对于特定的输入，它总会返回一致的输出。 React为每个组件提供了生命周期钩子函数去响应不同的时刻，组件的生命周期分为三个部分：（1）实例化；（2）存在期；（3）销毁&amp;清理期。具体周期如下图所示：<br><img src="life-circle.png" alt=""></p>
+<h4 id="生命周期共提供了10个不同的API。"><a href="#生命周期共提供了10个不同的API。" class="headerlink" title="生命周期共提供了10个不同的API。"></a>生命周期共提供了10个不同的API。</h4><p>1.getDefaultProps</p>
+<p>作用于组件类，只调用一次，返回对象用于设置默认的props，对于引用值，会在实例中共享。</p>
+<p>2.getInitialState</p>
+<p>作用于组件的实例，在实例创建时调用一次，用于初始化每个实例的state，此时可以访问this.props。</p>
+<p>3.componentWillMount</p>
+<p>在完成首次渲染之前调用，此时仍可以修改组件的state。</p>
+<p>4.render</p>
+<p>必选的方法，创建虚拟DOM，该方法具有特殊的规则：</p>
+<p>只能通过this.props和this.state访问数据<br>可以返回null、false或任何React组件<br>只能出现一个顶级组件（不能返回数组）<br>不能改变组件的状态<br>不能修改DOM的输出</p>
+<p>5.componentDidMount</p>
+<p>真实的DOM被渲染出来后调用，在该方法中可通过this.getDOMNode()访问到真实的DOM元素。此时已可以使用其他类库来操作这个DOM。</p>
+<p>在服务端中，该方法不会被调用。</p>
+<p>6.componentWillReceiveProps</p>
+<p>组件接收到新的props时调用，并将其作为参数nextProps使用，此时可以更改组件props及state。<br><figure class="highlight jsx"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">componentWillReceiveProps: <span class="function"><span class="keyword">function</span>(<span class="params">nextProps</span>) </span>&#123;</div><div class="line">    <span class="keyword">if</span> (nextProps.bool) &#123;</div><div class="line">        <span class="keyword">this</span>.setState(&#123;</div><div class="line">            <span class="attr">bool</span>: <span class="literal">true</span></div><div class="line">        &#125;);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>7.shouldComponentUpdate</p>
+<p>组件是否应当渲染新的props或state，返回false表示跳过后续的生命周期方法，通常不需要使用以避免出现bug。在出现应用的瓶颈时，可通过该方法进行适当的优化。</p>
+<p>在首次渲染期间或者调用了forceUpdate方法后，该方法不会被调用</p>
+<p>8.componentWillUpdate</p>
+<p>接收到新的props或者state后，进行渲染之前调用，此时不允许更新props或state。</p>
+<p>9.componentDidUpdate</p>
+<p>完成渲染新的props或者state后调用，此时可以访问到新的DOM元素。</p>
+<p>10.componentWillUnmount</p>
+<p>组件被移除之前被调用，可以用于做一些清理工作，在componentDidMount方法中添加的所有任务都需要在该方法中撤销，比如创建的定时器或添加的事件监听器。</p>
+<p><a href="http://www.reactjs.cn/react/docs/component-specs.html" target="_blank" rel="external">组件的生命周期链接</a></p>
+<h2 id="6、组件的写法"><a href="#6、组件的写法" class="headerlink" title="6、组件的写法"></a>6、组件的写法</h2><p>ES5写法：<br><figure class="highlight jsx"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> Hello = React.createClass(&#123;</div><div class="line">    getInitialState() &#123;</div><div class="line">        <span class="keyword">return</span> &#123; &#125;;</div><div class="line">    &#125;,</div><div class="line">    <span class="attr">render</span>: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">return</span>(</div><div class="line">            &lt;div&gt;</div><div class="line">                &lt;h1&gt;Hello world&lt;/h1&gt;</div><div class="line">            &lt;/div&gt;</div><div class="line">        )</div><div class="line">    &#125;</div><div class="line">&#125;);</div><div class="line"><span class="built_in">module</span>.exports=Hello;</div></pre></td></tr></table></figure></p>
+<p>ES6写法：<br><figure class="highlight jsx"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="class"><span class="keyword">class</span> <span class="title">Hello</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</div><div class="line">    <span class="keyword">constructor</span>(props) &#123;</div><div class="line">        <span class="keyword">super</span>(props);</div><div class="line">        <span class="keyword">this</span>.state = &#123; <span class="attr">standard</span>: <span class="string">'es6'</span>&#125;;</div><div class="line">    &#125;</div><div class="line">    render() &#123;</div><div class="line">        <span class="keyword">return</span> (</div><div class="line">            &lt;div&gt;</div><div class="line">                &lt;h1&gt;Hello world&#123;this.state.standard&#125;&lt;/h1&gt;</div><div class="line">            &lt;/div&gt;</div><div class="line">        )</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 
       
 
